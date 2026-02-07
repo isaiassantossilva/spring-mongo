@@ -1,6 +1,6 @@
 services:
-  mongo:
-    image: mongo
+  mongodb:
+    image: mongo:latest
     restart: always
     environment:
       MONGO_INITDB_DATABASE: spring-mongo
@@ -8,13 +8,13 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: spring-mongo
     ports:
       - "27017:27017"
-#    volumes:
-#      - mongo_data:/data/db
+    volumes:
+      - mongodb_data:/data/db
     deploy:
       resources:
         limits:
           cpus: '1'
           memory: '1GB'
 
-#volumes:
-#  mongo_data:
+volumes:
+  mongodb_data:
