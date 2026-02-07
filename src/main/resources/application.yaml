@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-mongo
+
+  mongodb:
+    uri: mongodb://spring-mongo:spring-mongo@localhost:27017/spring-mongo?authSource=admin&readPreference=primary&directConnection=true&ssl=false
